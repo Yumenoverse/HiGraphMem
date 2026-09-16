@@ -1,0 +1,8 @@
+dataset:
+  name: longmemeval_s
+  path: data/longmemeval/longmemeval_s_cleaned.json
+output:
+  path: experiments/results/longmemeval.json
+include:
+  - configs/default.yaml
+

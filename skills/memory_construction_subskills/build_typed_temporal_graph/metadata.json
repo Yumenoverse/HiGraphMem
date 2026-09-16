@@ -1,0 +1,30 @@
+{
+  "metadata_schema": "higraphmem2-memory-subskill-v0.1",
+  "id": "build_typed_temporal_graph",
+  "category": "long-term-graph-memory",
+  "status": "fixed",
+  "version": "v0.1.0",
+  "display": {
+    "title": "Build Grounded MemoryGraph",
+    "summary": "Constructs evidence-backed Grounded MemoryGraph from QA-masked conversation input.",
+    "tags": ["long_term_memory", "typed_graph", "temporal_graph", "qa_masked"]
+  },
+  "routing": {
+    "trigger": ["build graph", "long-term memory", "Grounded MemoryGraph", "conversation graph"],
+    "evidence_trigger": ["speaker", "session", "timestamp", "observation", "dialogue turn"]
+  },
+  "io": {
+    "inputs": ["conversation_id", "conversation", "observation"],
+    "outputs": ["nodes.jsonl", "edges.jsonl", "graph_metadata.json"],
+    "scripts": ["scripts/build_graph.py"],
+    "references": ["references/graph_schema.json"]
+  },
+  "policy": {
+    "memory_scope": "conversation_local",
+    "graph_style": "graphrag_lightrag_derived_typed_temporal_graph",
+    "gold_qa_visible": false,
+    "allowed_sources": ["conversation", "observation", "session_timestamp"],
+    "forbidden_sources": ["qa.answer", "qa.evidence", "qa.category", "test_error_feedback"],
+    "stores_sample_specific_facts": false
+  }
+}

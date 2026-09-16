@@ -1,0 +1,28 @@
+{
+  "metadata_schema": "higraphmem2-memory-subskill-v0.1",
+  "id": "retrieve_long_short_memory",
+  "category": "memory-retrieval-controller",
+  "status": "fixed",
+  "version": "v0.1.0",
+  "display": {
+    "title": "Retrieve Memory Evidence Bundle",
+    "summary": "Composes graph paths, working-memory clues, and raw spans for QA-time answering.",
+    "tags": ["retrieval", "controller", "graph_walk", "working_memory"]
+  },
+  "routing": {
+    "trigger": ["retrieve", "answer question", "graph walk", "evidence bundle"],
+    "evidence_trigger": ["question entity", "activated node", "open-domain clue", "temporal edge"]
+  },
+  "io": {
+    "inputs": ["question", "long_term_graph", "short_term_working_memory", "raw_dialogue_index"],
+    "outputs": ["evidence_bundle.json"],
+    "scripts": ["scripts/retrieve.py"],
+    "references": ["references/retrieval_policy.json"]
+  },
+  "policy": {
+    "question_visible": true,
+    "gold_qa_visible": false,
+    "allowed_sources": ["question", "long_term_graph", "short_term_working_memory", "raw_dialogue_index"],
+    "forbidden_sources": ["qa.answer", "qa.evidence", "qa.category", "test_error_feedback"]
+  }
+}

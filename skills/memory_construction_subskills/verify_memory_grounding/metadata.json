@@ -1,0 +1,28 @@
+{
+  "metadata_schema": "higraphmem2-memory-subskill-v0.1",
+  "id": "verify_memory_grounding",
+  "category": "answer-verification",
+  "status": "fixed",
+  "version": "v0.1.0",
+  "display": {
+    "title": "Verify Memory Grounding",
+    "summary": "Checks answer support against evidence bundles without using gold labels.",
+    "tags": ["verification", "grounding", "normalization", "no_gold_labels"]
+  },
+  "routing": {
+    "trigger": ["verify", "grounding", "support score", "normalize answer"],
+    "evidence_trigger": ["candidate answer", "evidence bundle", "source ids"]
+  },
+  "io": {
+    "inputs": ["question", "candidate_answer", "evidence_bundle"],
+    "outputs": ["accepted", "support_score", "failure_reason", "normalized_answer"],
+    "scripts": ["scripts/verify.py"],
+    "references": ["references/verification_policy.json"]
+  },
+  "policy": {
+    "gold_qa_visible": false,
+    "allowed_sources": ["question", "candidate_answer", "evidence_bundle"],
+    "forbidden_sources": ["qa.answer", "qa.evidence", "qa.category", "test_error_feedback"],
+    "allowed_open_domain_bridge_steps": 1
+  }
+}

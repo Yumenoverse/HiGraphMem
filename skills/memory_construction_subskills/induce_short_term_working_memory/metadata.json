@@ -1,0 +1,30 @@
+{
+  "metadata_schema": "higraphmem2-memory-subskill-v0.1",
+  "id": "induce_short_term_working_memory",
+  "category": "short-term-working-memory",
+  "status": "fixed",
+  "version": "v0.1.0",
+  "display": {
+    "title": "Induce Triggered Working Memory",
+    "summary": "Creates bounded structured working memory from graph and dialogue evidence.",
+    "tags": ["short_term_memory", "working_memory", "structured_json", "qa_masked"]
+  },
+  "routing": {
+    "trigger": ["short-term memory", "working memory", "temporary skill memory", "activated clues"],
+    "evidence_trigger": ["alias", "clue", "evidence path", "bridge type", "normalization"]
+  },
+  "io": {
+    "inputs": ["conversation_id", "long_term_graph", "raw_dialogue_index", "question_optional"],
+    "outputs": ["short_term_working_memory.json"],
+    "scripts": ["scripts/induce_memory.py"],
+    "references": ["references/short_term_memory_schema.json"]
+  },
+  "policy": {
+    "memory_scope": "conversation_local",
+    "working_memory_model": "triggered_capacity_limited_structured_memory",
+    "gold_qa_visible": false,
+    "allowed_sources": ["conversation", "observation", "session_timestamp", "test_question_at_retrieval_time"],
+    "forbidden_sources": ["qa.answer", "qa.evidence", "qa.category", "test_error_feedback"],
+    "must_not_write_to_global_skill_library": true
+  }
+}

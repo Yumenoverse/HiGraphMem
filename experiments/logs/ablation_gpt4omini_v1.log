@@ -1,0 +1,12 @@
+=== Running gmgraph/text-rag: ablation_gpt4omini_v1_text_rag ===
+Starting conversation 0
+Starting conversation 1
+Starting conversation 2
+Starting conversation 3
+Starting conversation 4
+Starting conversation 5
+Starting conversation 6
+Starting conversation 7
+Starting conversation 8
+Starting conversation 9
+At least one shard failed. Inspect experiments/logs/ablation_gpt4omini_v1_text_rag; rerun this command to resume completed shards.

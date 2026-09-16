@@ -1,0 +1,19 @@
+memory:
+  buffer_size: 10
+  decay_half_life_days: 90
+  confidence_threshold: 0.4
+retrieval:
+  top_k: 8
+  route_temporal_keywords:
+    - when
+    - before
+    - after
+    - recently
+    - 什么时候
+    - 之前
+    - 之后
+    - 最近
+llm:
+  backend: dummy
+  model: gpt-4o-mini
+

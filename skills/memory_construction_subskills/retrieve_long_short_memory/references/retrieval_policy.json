@@ -1,0 +1,23 @@
+{
+  "schema": "higraphmem2-memory-retrieval-policy-v0.1",
+  "modes": {
+    "single_hop": {
+      "priority": ["raw_span", "entity_state", "graph_neighbor"],
+      "max_graph_hops": 1
+    },
+    "multi_hop": {
+      "priority": ["graph_path", "working_evidence", "raw_span"],
+      "max_graph_hops": 3
+    },
+    "temporal": {
+      "priority": ["time_node", "valid_during_edge", "session_timestamp", "raw_span"],
+      "max_graph_hops": 2
+    },
+    "open_domain": {
+      "priority": ["open_domain_clue", "raw_span", "single_public_knowledge_bridge"],
+      "max_graph_hops": 2,
+      "allowed_external_steps": 1
+    }
+  },
+  "fallback": "return_no_information_available_when_no_evidence_path"
+}

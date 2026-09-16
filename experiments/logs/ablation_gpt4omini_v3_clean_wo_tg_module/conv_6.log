@@ -1,0 +1,6 @@
+API call failed (Connection error.). Retrying in 10.0s [1/10].
+API call failed (Error code: 503 - {'error': {'message': 'No available channel for model gpt-4o-mini under group *** (distributor)', 'localized_message': 'Unknown error', 'type': 'new_api_error', 'param': '', 'code': 'model_not_found'}}). Retrying in 10.0s [1/10].
+API call failed (Error code: 503 - {'error': {'message': 'No available channel for model gpt-4o-mini under group *** (distributor)', 'localized_message': 'Unknown error', 'type': 'new_api_error', 'param': '', 'code': 'model_not_found'}}). Retrying in 10.0s [1/10].
+API call failed (Error code: 503 - {'error': {'message': 'No available channel for model gpt-4o-mini under group *** (distributor)', 'localized_message': 'Unknown error', 'type': 'new_api_error', 'param': '', 'code': 'model_not_found'}}). Retrying in 10.0s [1/10].
+API call failed (Error code: 503 - {'error': {'message': 'No available channel for model gpt-4o-mini under group *** (distributor)', 'localized_message': 'Unknown error', 'type': 'new_api_error', 'param': '', 'code': 'model_not_found'}}). Retrying in 10.0s [1/10].
+experiments/results/ablation_gpt4omini_v3_clean_wo_tg_module_shards/conv_6.json

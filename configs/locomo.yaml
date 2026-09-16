@@ -1,0 +1,8 @@
+dataset:
+  name: locomo
+  path: data/locomo
+output:
+  path: experiments/results/locomo.json
+include:
+  - configs/default.yaml
+

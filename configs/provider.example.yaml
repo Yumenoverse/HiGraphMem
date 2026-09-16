@@ -1,0 +1,7 @@
+# Copy this file to configs/provider.yaml or configs/provider_qwen.yaml,
+# then fill in your own OpenAI-compatible proxy endpoint and API key.
+provider:
+  api_key: ""
+  api_key_env: OPENAI_API_KEY
+  base_url: ""
+  chat_model: "gpt-4o-mini"

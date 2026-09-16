@@ -1,0 +1,17 @@
+{
+  "schema": "higraphmem2-verification-policy-v0.1",
+  "checks": [
+    "answer_string_or_alias_supported_by_raw_span",
+    "answer_entity_connected_to_question_entity_by_graph_path",
+    "open_domain_answer_licensed_by_explicit_clue",
+    "temporal_answer_consistent_with_session_timestamp",
+    "list_answer_items_each_have_support"
+  ],
+  "reject_when": [
+    "no_source_id_supports_answer",
+    "open_domain_answer_requires_more_than_one_external_step",
+    "answer_contains_new_named_entity_not_licensed_by_evidence",
+    "answer_conflicts_with_more_recent_state"
+  ],
+  "fallback_answer": "No information available"
+}

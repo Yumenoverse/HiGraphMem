@@ -1,0 +1,74 @@
+{
+  "schema": "higraphmem2-short-term-working-memory-v0.1",
+  "required_fields": [
+    "conversation_id",
+    "source_scope",
+    "question_focus",
+    "aliases",
+    "activated_nodes",
+    "working_evidence",
+    "open_domain_clues",
+    "active_operations",
+    "constraints"
+  ],
+  "formation_stages": [
+    {
+      "name": "bottom_up_activation",
+      "description": "Visible question tokens and salient conversation cues activate candidate graph nodes."
+    },
+    {
+      "name": "top_down_control",
+      "description": "Question intent selects operations such as temporal resolution, multi-hop graph walk, or open-domain bridge."
+    },
+    {
+      "name": "binding",
+      "description": "Activated entities, aliases, clues, raw spans, and graph paths are bound into a temporary working state."
+    },
+    {
+      "name": "capacity_control",
+      "description": "Only the highest-activation evidence paths and operations are kept in the working buffer."
+    }
+  ],
+  "activation_algorithm": {
+    "name": "weighted_graph_activation_propagation_v0.1",
+    "initial_activation": "a0(v|q)=query_match(q,v)+intent_bias(type(v),q)+prior_weight(v)",
+    "propagation": "a_{k+1}(v|q)=clip(a_k(v|q)+lambda*sum_u a_k(u|q)*w(u,v)*gate(type(u,v)))",
+    "default_steps": 2,
+    "capacity_limit": {
+      "multi_hop": 6,
+      "temporal": 3,
+      "open_domain": 3,
+      "single_hop": 1
+    },
+    "type_balancing": "per-type caps prevent high-frequency nodes, especially Person nodes, from dominating the buffer"
+  },
+  "question_focus": {
+    "entities": "list[string]",
+    "intent": "single_hop | multi_hop | temporal | open_domain | unknown",
+    "answer_type": "string"
+  },
+  "aliases": {
+    "canonical": "string",
+    "aliases": "list[string]",
+    "evidence_ids": "list[string]"
+  },
+  "working_evidence": {
+    "path": "list[string]",
+    "raw_span_ids": "list[string]",
+    "bridge_type": "string",
+    "confidence": "number"
+  },
+  "open_domain_clues": {
+    "subject": "string",
+    "clue": "string",
+    "bridge_type": "string",
+    "allowed_external_steps": "integer",
+    "evidence_ids": "list[string]"
+  },
+  "clean_constraints": {
+    "qa_answer_visible": false,
+    "qa_evidence_visible": false,
+    "test_error_visible": false,
+    "conversation_isolated": true
+  }
+}

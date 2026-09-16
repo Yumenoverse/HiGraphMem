@@ -1,0 +1,10 @@
+{
+  "metadata_schema": "higraphmem2-memory-construction-library-v0.1",
+  "format": "mat-skill-agent-style-subskills",
+  "library_name": "HiGraphMem memory skills",
+  "status": "fixed_no_locomo_qa_evolution",
+  "source_scope": "method_level_procedures_only",
+  "gold_qa_visible": false,
+  "stores_sample_specific_facts": false,
+  "description": "Reusable skills for constructing and controlling Grounded MemoryGraph, Triggered Working Memory, and Memory Evidence Bundle. These skills define procedures, scripts, and schemas; conversation-specific facts must be written only to isolated memory run directories."
+}

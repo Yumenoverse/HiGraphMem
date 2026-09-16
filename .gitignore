@@ -1,0 +1,34 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+experiments/results/*.json
+experiments/results/*.jsonl
+
+# Keep lightweight, auditable run logs only; all predictions and memory-run
+# artifacts are reproducible intermediates.
+experiments/*
+!experiments/logs/
+!experiments/logs/**
+
+# Local provider credentials are required for reproduction on this machine,
+# but must never be committed to a public repository.
+configs/provider*.yaml
+!configs/provider.example.yaml
+
+# The manuscript source and paper-only working assets stay local.
+paper/
+
+# The project website is deployed separately, and the legacy induced schema is
+# not part of the executable HiGraphMem pipeline.
+docs/
+schemas/
+
+# Upstream baseline repositories are optional external dependencies.
+baseline/
+
+# Only the public LoCoMo QA release used by the experiment is versioned here.
+data/locomo/*
+!data/locomo/LICENSE.txt
+!data/locomo/data/
+data/locomo/data/*
+!data/locomo/data/locomo10.json

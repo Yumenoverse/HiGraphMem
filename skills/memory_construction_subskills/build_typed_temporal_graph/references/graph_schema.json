@@ -1,0 +1,103 @@
+{
+  "schema": "higraphmem2-typed-temporal-graph-v0.1",
+  "node_types": [
+    "Person",
+    "Event",
+    "State",
+    "Time",
+    "Place",
+    "Object",
+    "Topic",
+    "Preference",
+    "Goal",
+    "EvidenceSpan",
+    "ObservationFact",
+    "OpenDomainClue"
+  ],
+  "edge_types": [
+    "PARTICIPATES_IN",
+    "HAS_STATE",
+    "HAS_PREFERENCE",
+    "HAS_GOAL",
+    "MENTIONS_OBJECT",
+    "LOCATED_IN",
+    "HAPPENED_AT",
+    "VALID_DURING",
+    "RELATED_TO",
+    "SUPPORTS",
+    "SUMMARIZES",
+    "TEMPORAL_NEXT",
+    "CAUSES",
+    "CONTRASTS_WITH",
+    "BRIDGES_TO"
+  ],
+  "required_node_fields": [
+    "id",
+    "type",
+    "label",
+    "source_ids",
+    "confidence",
+    "memory_step",
+    "prior_weight",
+    "delta_strength",
+    "delta_inhibition",
+    "weight_components",
+    "weight"
+  ],
+  "required_edge_fields": [
+    "source",
+    "target",
+    "type",
+    "source_ids",
+    "confidence",
+    "memory_step",
+    "prior_weight",
+    "delta_strength",
+    "delta_inhibition",
+    "weight_components",
+    "weight"
+  ],
+  "consolidation_algorithm": {
+    "name": "streaming_memory_consolidation_v0.1",
+    "update": "w_{t+1}(m)=clip(rho*w_t(m)+R_t(m)-I_t(m))",
+    "reinforcement_terms": [
+      "frequency",
+      "source_reliability",
+      "salience",
+      "extractor_confidence",
+      "temporal_relevance",
+      "evidence_count",
+      "relation_strength"
+    ],
+    "inhibition_terms": [
+      "same_slot_conflict",
+      "stale_state_penalty",
+      "polarity_conflict"
+    ]
+  },
+  "extraction_contract": {
+    "method": "schema_grounded_extractor_v0.2",
+    "required_attrs_for_extracted_units": [
+      "text",
+      "speaker",
+      "source_type",
+      "extraction_method",
+      "slot",
+      "value"
+    ],
+    "open_domain_clue_types": [
+      "entertainment_clue_to_named_item",
+      "location_clue_to_place",
+      "profile_clue_to_career_or_field",
+      "reading_clue_to_likely_book_or_author",
+      "work_clue_to_industry_or_organization",
+      "descriptive_clue_to_concept"
+    ]
+  },
+  "clean_constraints": {
+    "qa_answer_visible": false,
+    "qa_evidence_visible": false,
+    "qa_category_visible": false,
+    "conversation_isolated": true
+  }
+}

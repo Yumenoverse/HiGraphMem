@@ -1,0 +1,385 @@
+[2026-09-14 22:56:43] START ablation_qwen25_14b_v3_clean_wo_fact_memory, attempt 1
+Starting conversation 0
+Starting conversation 1
+Starting conversation 2
+Starting conversation 3
+Starting conversation 4
+Starting conversation 5
+Starting conversation 6
+Starting conversation 7
+Starting conversation 8
+Starting conversation 9
+merged 10 conversations into experiments/results/ablation_qwen25_14b_v3_clean_wo_fact_memory.json
+{
+  "input": "experiments/results/ablation_qwen25_14b_v3_clean_wo_fact_memory.json",
+  "prediction_key": "higraphmem_prediction",
+  "total_qas": 1540,
+  "qas_with_recorded_usage": 1540,
+  "coverage": 1.0,
+  "phases": {
+    "answer": {
+      "calls": 2066,
+      "calls_with_usage": 2066,
+      "prompt_tokens": 5597674,
+      "completion_tokens": 11911,
+      "total_tokens": 5609585,
+      "latency_seconds": 2420.734311999999
+    }
+  },
+  "online": {
+    "calls": 2066,
+    "calls_with_usage": 2066,
+    "prompt_tokens": 5597674,
+    "completion_tokens": 11911,
+    "total_tokens": 5609585,
+    "latency_seconds": 2420.734311999999
+  },
+  "end_to_end": {
+    "calls": 2066,
+    "calls_with_usage": 2066,
+    "prompt_tokens": 5597674,
+    "completion_tokens": 11911,
+    "total_tokens": 5609585,
+    "latency_seconds": 2420.734311999999
+  },
+  "mean_online_total_tokens_per_qa": 3642.5876623376626,
+  "mean_end_to_end_total_tokens_per_qa": 3642.5876623376626,
+  "mean_online_api_latency_seconds_per_call": 1.1717010222652464,
+  "mean_online_api_latency_seconds_per_qa": 1.571905397402597,
+  "online_completion_tokens_per_second": 4.9204078039275565,
+  "online_total_tokens_per_second": 2317.3071791449047,
+  "usage_source": "provider_response_usage; latency is successful provider API wall time only; unavailable usage is not estimated"
+}
+1540 QA samples evaluated; 1540 accuracy values
+| Model | Method | Multi-Hop F1 | Multi-Hop BLEU-1 | Temporal F1 | Temporal BLEU-1 | Open-Domain F1 | Open-Domain BLEU-1 | Single-Hop F1 | Single-Hop BLEU-1 | Avg F1 | Avg BLEU-1 | Weighted Avg F1 | Weighted Avg BLEU-1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Qwen2.5-14B-Instruct | HiGraphMem w/o Fact Memory | 35.73 | 25.47 | 46.29 | 41.44 | 20.91 | 12.96 | 56.86 | 50.00 | 39.94 | 32.47 | 48.54 | 41.42 |
+
+Counts: {'Multi-Hop': 282, 'Temporal': 321, 'Open-Domain': 96, 'Single-Hop': 841, 'Avg': 1540, 'Weighted Avg': 1540}
+Official eval JSON: experiments/results/ablation_qwen25_14b_v3_clean_wo_fact_memory_official_eval.json
+Labeled predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_fact_memory_official_eval_labeled_predictions.json
+Predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_fact_memory.json
+Token usage: experiments/results/ablation_qwen25_14b_v3_clean_wo_fact_memory_token_usage.json
+Official evaluation: experiments/results/ablation_qwen25_14b_v3_clean_wo_fact_memory_official_eval.json
+[2026-09-15 00:20:39] DONE ablation_qwen25_14b_v3_clean_wo_fact_memory
+[2026-09-15 00:20:39] START ablation_qwen25_14b_v3_clean_wo_gmgraph, attempt 1
+Starting conversation 0
+Starting conversation 1
+Starting conversation 2
+Starting conversation 3
+Starting conversation 4
+Starting conversation 5
+Starting conversation 6
+Starting conversation 7
+Starting conversation 8
+Starting conversation 9
+merged 10 conversations into experiments/results/ablation_qwen25_14b_v3_clean_wo_gmgraph.json
+{
+  "input": "experiments/results/ablation_qwen25_14b_v3_clean_wo_gmgraph.json",
+  "prediction_key": "higraphmem_prediction",
+  "total_qas": 1540,
+  "qas_with_recorded_usage": 1540,
+  "coverage": 1.0,
+  "phases": {
+    "answer": {
+      "calls": 2058,
+      "calls_with_usage": 2058,
+      "prompt_tokens": 6495730,
+      "completion_tokens": 12139,
+      "total_tokens": 6507869,
+      "latency_seconds": 2378.031817
+    }
+  },
+  "online": {
+    "calls": 2058,
+    "calls_with_usage": 2058,
+    "prompt_tokens": 6495730,
+    "completion_tokens": 12139,
+    "total_tokens": 6507869,
+    "latency_seconds": 2378.031817
+  },
+  "end_to_end": {
+    "calls": 2058,
+    "calls_with_usage": 2058,
+    "prompt_tokens": 6495730,
+    "completion_tokens": 12139,
+    "total_tokens": 6507869,
+    "latency_seconds": 2378.031817
+  },
+  "mean_online_total_tokens_per_qa": 4225.888961038961,
+  "mean_end_to_end_total_tokens_per_qa": 4225.888961038961,
+  "mean_online_api_latency_seconds_per_call": 1.1555062278911565,
+  "mean_online_api_latency_seconds_per_qa": 1.5441765045454545,
+  "online_completion_tokens_per_second": 5.104641541471857,
+  "online_total_tokens_per_second": 2736.6618703234954,
+  "usage_source": "provider_response_usage; latency is successful provider API wall time only; unavailable usage is not estimated"
+}
+1540 QA samples evaluated; 1540 accuracy values
+| Model | Method | Multi-Hop F1 | Multi-Hop BLEU-1 | Temporal F1 | Temporal BLEU-1 | Open-Domain F1 | Open-Domain BLEU-1 | Single-Hop F1 | Single-Hop BLEU-1 | Avg F1 | Avg BLEU-1 | Weighted Avg F1 | Weighted Avg BLEU-1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Qwen2.5-14B-Instruct | HiGraphMem w/o GMGraph | 35.73 | 25.30 | 51.26 | 46.03 | 23.95 | 15.56 | 58.78 | 51.93 | 42.43 | 34.70 | 50.82 | 43.56 |
+
+Counts: {'Multi-Hop': 282, 'Temporal': 321, 'Open-Domain': 96, 'Single-Hop': 841, 'Avg': 1540, 'Weighted Avg': 1540}
+Official eval JSON: experiments/results/ablation_qwen25_14b_v3_clean_wo_gmgraph_official_eval.json
+Labeled predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_gmgraph_official_eval_labeled_predictions.json
+Predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_gmgraph.json
+Token usage: experiments/results/ablation_qwen25_14b_v3_clean_wo_gmgraph_token_usage.json
+Official evaluation: experiments/results/ablation_qwen25_14b_v3_clean_wo_gmgraph_official_eval.json
+[2026-09-15 02:45:24] DONE ablation_qwen25_14b_v3_clean_wo_gmgraph
+[2026-09-15 02:45:24] START ablation_qwen25_14b_v3_clean_wo_update, attempt 1
+Starting conversation 0
+Starting conversation 1
+Starting conversation 2
+Starting conversation 3
+Starting conversation 4
+Starting conversation 5
+Starting conversation 6
+Starting conversation 7
+Starting conversation 8
+Starting conversation 9
+merged 10 conversations into experiments/results/ablation_qwen25_14b_v3_clean_wo_update.json
+{
+  "input": "experiments/results/ablation_qwen25_14b_v3_clean_wo_update.json",
+  "prediction_key": "higraphmem_prediction",
+  "total_qas": 1540,
+  "qas_with_recorded_usage": 1540,
+  "coverage": 1.0,
+  "phases": {
+    "answer": {
+      "calls": 2052,
+      "calls_with_usage": 2052,
+      "prompt_tokens": 6404098,
+      "completion_tokens": 12725,
+      "total_tokens": 6416823,
+      "latency_seconds": 2244.906162000004
+    }
+  },
+  "online": {
+    "calls": 2052,
+    "calls_with_usage": 2052,
+    "prompt_tokens": 6404098,
+    "completion_tokens": 12725,
+    "total_tokens": 6416823,
+    "latency_seconds": 2244.906162000004
+  },
+  "end_to_end": {
+    "calls": 2052,
+    "calls_with_usage": 2052,
+    "prompt_tokens": 6404098,
+    "completion_tokens": 12725,
+    "total_tokens": 6416823,
+    "latency_seconds": 2244.906162000004
+  },
+  "mean_online_total_tokens_per_qa": 4166.768181818182,
+  "mean_end_to_end_total_tokens_per_qa": 4166.768181818182,
+  "mean_online_api_latency_seconds_per_call": 1.0940088508771948,
+  "mean_online_api_latency_seconds_per_qa": 1.4577312740259765,
+  "online_completion_tokens_per_second": 5.668388378721007,
+  "online_total_tokens_per_second": 2858.3925282129403,
+  "usage_source": "provider_response_usage; latency is successful provider API wall time only; unavailable usage is not estimated"
+}
+1540 QA samples evaluated; 1540 accuracy values
+| Model | Method | Multi-Hop F1 | Multi-Hop BLEU-1 | Temporal F1 | Temporal BLEU-1 | Open-Domain F1 | Open-Domain BLEU-1 | Single-Hop F1 | Single-Hop BLEU-1 | Avg F1 | Avg BLEU-1 | Weighted Avg F1 | Weighted Avg BLEU-1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Qwen2.5-14B-Instruct | HiGraphMem w/o Update | 35.20 | 25.68 | 51.18 | 45.67 | 23.96 | 14.58 | 57.62 | 50.89 | 41.99 | 34.20 | 50.07 | 42.92 |
+
+Counts: {'Multi-Hop': 282, 'Temporal': 321, 'Open-Domain': 96, 'Single-Hop': 841, 'Avg': 1540, 'Weighted Avg': 1540}
+Official eval JSON: experiments/results/ablation_qwen25_14b_v3_clean_wo_update_official_eval.json
+Labeled predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_update_official_eval_labeled_predictions.json
+Predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_update.json
+Token usage: experiments/results/ablation_qwen25_14b_v3_clean_wo_update_token_usage.json
+Official evaluation: experiments/results/ablation_qwen25_14b_v3_clean_wo_update_official_eval.json
+[2026-09-15 05:04:02] DONE ablation_qwen25_14b_v3_clean_wo_update
+[2026-09-15 05:04:02] START ablation_qwen25_14b_v3_clean_wo_conflict_control, attempt 1
+Starting conversation 0
+Starting conversation 1
+Starting conversation 2
+Starting conversation 3
+Starting conversation 4
+Starting conversation 5
+Starting conversation 6
+Starting conversation 7
+Starting conversation 8
+Starting conversation 9
+merged 10 conversations into experiments/results/ablation_qwen25_14b_v3_clean_wo_conflict_control.json
+{
+  "input": "experiments/results/ablation_qwen25_14b_v3_clean_wo_conflict_control.json",
+  "prediction_key": "higraphmem_prediction",
+  "total_qas": 1540,
+  "qas_with_recorded_usage": 1540,
+  "coverage": 1.0,
+  "phases": {
+    "answer": {
+      "calls": 2058,
+      "calls_with_usage": 2058,
+      "prompt_tokens": 6496090,
+      "completion_tokens": 12092,
+      "total_tokens": 6508182,
+      "latency_seconds": 2308.875709999994
+    }
+  },
+  "online": {
+    "calls": 2058,
+    "calls_with_usage": 2058,
+    "prompt_tokens": 6496090,
+    "completion_tokens": 12092,
+    "total_tokens": 6508182,
+    "latency_seconds": 2308.875709999994
+  },
+  "end_to_end": {
+    "calls": 2058,
+    "calls_with_usage": 2058,
+    "prompt_tokens": 6496090,
+    "completion_tokens": 12092,
+    "total_tokens": 6508182,
+    "latency_seconds": 2308.875709999994
+  },
+  "mean_online_total_tokens_per_qa": 4226.092207792208,
+  "mean_end_to_end_total_tokens_per_qa": 4226.092207792208,
+  "mean_online_api_latency_seconds_per_call": 1.121902677356654,
+  "mean_online_api_latency_seconds_per_qa": 1.4992699415584376,
+  "online_completion_tokens_per_second": 5.23718100009811,
+  "online_total_tokens_per_second": 2818.766714818104,
+  "usage_source": "provider_response_usage; latency is successful provider API wall time only; unavailable usage is not estimated"
+}
+1540 QA samples evaluated; 1540 accuracy values
+| Model | Method | Multi-Hop F1 | Multi-Hop BLEU-1 | Temporal F1 | Temporal BLEU-1 | Open-Domain F1 | Open-Domain BLEU-1 | Single-Hop F1 | Single-Hop BLEU-1 | Avg F1 | Avg BLEU-1 | Weighted Avg F1 | Weighted Avg BLEU-1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Qwen2.5-14B-Instruct | HiGraphMem w/o Conflict Control | 35.53 | 25.19 | 51.64 | 46.35 | 24.06 | 15.62 | 58.53 | 51.70 | 42.44 | 34.71 | 50.74 | 43.48 |
+
+Counts: {'Multi-Hop': 282, 'Temporal': 321, 'Open-Domain': 96, 'Single-Hop': 841, 'Avg': 1540, 'Weighted Avg': 1540}
+Official eval JSON: experiments/results/ablation_qwen25_14b_v3_clean_wo_conflict_control_official_eval.json
+Labeled predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_conflict_control_official_eval_labeled_predictions.json
+Predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_conflict_control.json
+Token usage: experiments/results/ablation_qwen25_14b_v3_clean_wo_conflict_control_token_usage.json
+Official evaluation: experiments/results/ablation_qwen25_14b_v3_clean_wo_conflict_control_official_eval.json
+[2026-09-15 06:35:57] DONE ablation_qwen25_14b_v3_clean_wo_conflict_control
+[2026-09-15 06:35:57] START ablation_qwen25_14b_v3_clean_wo_twmem, attempt 1
+Starting conversation 0
+Starting conversation 1
+Starting conversation 2
+Starting conversation 3
+Starting conversation 4
+Starting conversation 5
+Starting conversation 6
+Starting conversation 7
+Starting conversation 8
+Starting conversation 9
+merged 10 conversations into experiments/results/ablation_qwen25_14b_v3_clean_wo_twmem.json
+{
+  "input": "experiments/results/ablation_qwen25_14b_v3_clean_wo_twmem.json",
+  "prediction_key": "higraphmem_prediction",
+  "total_qas": 1540,
+  "qas_with_recorded_usage": 1540,
+  "coverage": 1.0,
+  "phases": {
+    "answer": {
+      "calls": 2058,
+      "calls_with_usage": 2058,
+      "prompt_tokens": 6493710,
+      "completion_tokens": 12110,
+      "total_tokens": 6505820,
+      "latency_seconds": 2492.8459050000038
+    }
+  },
+  "online": {
+    "calls": 2058,
+    "calls_with_usage": 2058,
+    "prompt_tokens": 6493710,
+    "completion_tokens": 12110,
+    "total_tokens": 6505820,
+    "latency_seconds": 2492.8459050000038
+  },
+  "end_to_end": {
+    "calls": 2058,
+    "calls_with_usage": 2058,
+    "prompt_tokens": 6493710,
+    "completion_tokens": 12110,
+    "total_tokens": 6505820,
+    "latency_seconds": 2492.8459050000038
+  },
+  "mean_online_total_tokens_per_qa": 4224.558441558442,
+  "mean_end_to_end_total_tokens_per_qa": 4224.558441558442,
+  "mean_online_api_latency_seconds_per_call": 1.2112953862973779,
+  "mean_online_api_latency_seconds_per_qa": 1.6187311071428596,
+  "online_completion_tokens_per_second": 4.85790155569202,
+  "online_total_tokens_per_second": 2609.796292242135,
+  "usage_source": "provider_response_usage; latency is successful provider API wall time only; unavailable usage is not estimated"
+}
+1540 QA samples evaluated; 1540 accuracy values
+| Model | Method | Multi-Hop F1 | Multi-Hop BLEU-1 | Temporal F1 | Temporal BLEU-1 | Open-Domain F1 | Open-Domain BLEU-1 | Single-Hop F1 | Single-Hop BLEU-1 | Avg F1 | Avg BLEU-1 | Weighted Avg F1 | Weighted Avg BLEU-1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Qwen2.5-14B-Instruct | HiGraphMem w/o TWMem | 35.37 | 25.19 | 51.20 | 45.89 | 23.60 | 15.74 | 58.93 | 52.06 | 42.27 | 34.72 | 50.80 | 43.59 |
+
+Counts: {'Multi-Hop': 282, 'Temporal': 321, 'Open-Domain': 96, 'Single-Hop': 841, 'Avg': 1540, 'Weighted Avg': 1540}
+Official eval JSON: experiments/results/ablation_qwen25_14b_v3_clean_wo_twmem_official_eval.json
+Labeled predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_twmem_official_eval_labeled_predictions.json
+Predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_twmem.json
+Token usage: experiments/results/ablation_qwen25_14b_v3_clean_wo_twmem_token_usage.json
+Official evaluation: experiments/results/ablation_qwen25_14b_v3_clean_wo_twmem_official_eval.json
+[2026-09-15 08:04:33] DONE ablation_qwen25_14b_v3_clean_wo_twmem
+[2026-09-15 08:04:33] START ablation_qwen25_14b_v3_clean_wo_gated_activation, attempt 1
+Starting conversation 0
+Starting conversation 1
+Starting conversation 2
+Starting conversation 3
+Starting conversation 4
+Starting conversation 5
+Starting conversation 6
+Starting conversation 7
+Starting conversation 8
+Starting conversation 9
+merged 10 conversations into experiments/results/ablation_qwen25_14b_v3_clean_wo_gated_activation.json
+{
+  "input": "experiments/results/ablation_qwen25_14b_v3_clean_wo_gated_activation.json",
+  "prediction_key": "higraphmem_prediction",
+  "total_qas": 1540,
+  "qas_with_recorded_usage": 1540,
+  "coverage": 1.0,
+  "phases": {
+    "answer": {
+      "calls": 2059,
+      "calls_with_usage": 2059,
+      "prompt_tokens": 6330349,
+      "completion_tokens": 12019,
+      "total_tokens": 6342368,
+      "latency_seconds": 2646.730531999999
+    }
+  },
+  "online": {
+    "calls": 2059,
+    "calls_with_usage": 2059,
+    "prompt_tokens": 6330349,
+    "completion_tokens": 12019,
+    "total_tokens": 6342368,
+    "latency_seconds": 2646.730531999999
+  },
+  "end_to_end": {
+    "calls": 2059,
+    "calls_with_usage": 2059,
+    "prompt_tokens": 6330349,
+    "completion_tokens": 12019,
+    "total_tokens": 6342368,
+    "latency_seconds": 2646.730531999999
+  },
+  "mean_online_total_tokens_per_qa": 4118.420779220779,
+  "mean_end_to_end_total_tokens_per_qa": 4118.420779220779,
+  "mean_online_api_latency_seconds_per_call": 1.2854446488586688,
+  "mean_online_api_latency_seconds_per_qa": 1.7186561896103891,
+  "online_completion_tokens_per_second": 4.541074300797012,
+  "online_total_tokens_per_second": 2396.302881354301,
+  "usage_source": "provider_response_usage; latency is successful provider API wall time only; unavailable usage is not estimated"
+}
+1540 QA samples evaluated; 1540 accuracy values
+| Model | Method | Multi-Hop F1 | Multi-Hop BLEU-1 | Temporal F1 | Temporal BLEU-1 | Open-Domain F1 | Open-Domain BLEU-1 | Single-Hop F1 | Single-Hop BLEU-1 | Avg F1 | Avg BLEU-1 | Weighted Avg F1 | Weighted Avg BLEU-1 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Qwen2.5-14B-Instruct | HiGraphMem w/o Gated Activation | 32.89 | 23.68 | 51.49 | 46.25 | 24.47 | 15.94 | 58.58 | 52.05 | 41.86 | 34.48 | 50.27 | 43.40 |
+
+Counts: {'Multi-Hop': 282, 'Temporal': 321, 'Open-Domain': 96, 'Single-Hop': 841, 'Avg': 1540, 'Weighted Avg': 1540}
+Official eval JSON: experiments/results/ablation_qwen25_14b_v3_clean_wo_gated_activation_official_eval.json
+Labeled predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_gated_activation_official_eval_labeled_predictions.json
+Predictions: experiments/results/ablation_qwen25_14b_v3_clean_wo_gated_activation.json
+Token usage: experiments/results/ablation_qwen25_14b_v3_clean_wo_gated_activation_token_usage.json
+Official evaluation: experiments/results/ablation_qwen25_14b_v3_clean_wo_gated_activation_official_eval.json
+[2026-09-15 09:31:01] DONE ablation_qwen25_14b_v3_clean_wo_gated_activation
+[2026-09-15 09:31:01] ALL QWEN ABLATIONS DONE
